@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="">Currency converter</h1>
+        <div class="currency-cotainer">
+            <select id="currency-first">
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
+                <option value="EUR">EUR</option>
+                <option value="INR">INR</option>
+                <option value=" GBP"> GBP</option>
+                <option value="USD" selected>USD</option>
+            </select>
+            <INPUt type="number" id="worth-first" value="1" min="0">
+        </div>
+        <div class="currency-cotainer">
+            <select id="currency-second">
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
+                <option value="EUR">EUR</option>
+                <option value="INR" selected>INR</option>
+                <option value="GBP">GBP</option>
+                <option value="USD">USD</option>
+            </select>
+            <INPUt type="number" id="worth-second" value="1" min="0" disabled>
+        </div>
+        <div class="">
+            <p class="exchange-rate" id="exchange-rate">1 USD = 138.5802 JPY</p>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
