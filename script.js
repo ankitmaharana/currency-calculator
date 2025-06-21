@@ -15,6 +15,8 @@ function updateRate() {
             // console.log(data);
             const rate = data.conversion_rates[currencySecondtEl.value];
             console.log(rate);
+
+            // Update the DOM to display the current exchange rate
             exchangeRateEl.innerText = `1 ${currencyFirstEl.value} = ${rate + " " + currencySecondtEl.value}`;
 
             worthSecondtEl.value = (worthFirstEl.value * rate).toFixed(2)
@@ -24,9 +26,8 @@ function updateRate() {
 }
 
 
-
+// Add event listeners to re-calculate when user changes either currency or amount
 currencyFirstEl.addEventListener("change", updateRate);
 currencySecondtEl.addEventListener("change", updateRate);
-
 worthFirstEl.addEventListener("input", updateRate);
 
