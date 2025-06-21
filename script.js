@@ -4,7 +4,7 @@ const currencySecondtEl = document.getElementById("currency-second");
 const worthSecondtEl = document.getElementById("worth-second");
 const exchangeRateEl = document.getElementById("exchange-rate");
 
-
+// Call updateRate once initially to show default conversion rate on load
 updateRate()
 
 
@@ -18,7 +18,8 @@ function updateRate() {
 
             // Update the DOM to display the current exchange rate
             exchangeRateEl.innerText = `1 ${currencyFirstEl.value} = ${rate + " " + currencySecondtEl.value}`;
-
+            
+            // Calculate the converted amount and set it in the second input field
             worthSecondtEl.value = (worthFirstEl.value * rate).toFixed(2)
 
         }
